@@ -26,30 +26,28 @@ function App() {
       </nav>
 
       {/* HERO */}
+      {/* HERO */}
       <section className="hero" id="home">
         <div className="hero-container">
 
           <div className="hero-left">
-            <h1>Hi, I'm Sabira</h1>
-            <h2>WordPress Plugin Developer</h2>
+            <h1>Hi, I'm <span className="highlight">Sabira K</span></h1>
+            <h2>Web Developer</h2>
             <p>
-              I build scalable WordPress plugins and modern React applications 
-              focused on performance, usability, and clean architecture.
+              I create scalable and performant web solutions with a focus on
+              clean code, architecture, and exceptional user experience.
             </p>
-
-            <div className="hero-buttons">
-              <a href="#projects" className="btn primary">
-                View Projects
-              </a>
-            </div>
           </div>
 
           <div className="hero-right">
-            <img src={profile} alt="Sabira Profile" />
+            <div className="profile-wrapper">
+              <img src={profile} alt="Sabira Profile" />
+            </div>
           </div>
 
         </div>
       </section>
+
 
       {/* ABOUT */}
       <section id="about" className="section">
@@ -122,8 +120,6 @@ function App() {
             Interested in building scalable web solutions or collaborating on innovative projects?
             Let’s connect and create something impactful together.
           </p>
-
-
           <a
             href="https://www.linkedin.com/in/sabira-k-0b3421212/"
             target="_blank"
