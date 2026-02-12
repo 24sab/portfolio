@@ -1,42 +1,251 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 80px 20px;
   text-align: center;
 }
 
+.dark {
+  background: #1a1a1a;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #c79e6f;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  z-index: 1000;
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #c79e6f;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
 }
 
+.nav-links a:hover {
+  color: #c79e6f;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 10%;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+}
+
+.hero-left h2 {
+  color: #c79e6f;
+  margin: 10px 0;
+}
+
+.hero-left p {
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #c79e6f;
+  color: black;
+}
+
+.primary:hover {
+  transform: translateY(-4px);
+}
+
+.secondary {
+  border: 2px solid #c79e6f;
+  color: #c79e6f;
+}
+
+.secondary:hover {
+  background: #c79e6f;
+  color: black;
+}
+
+.hero-right img {
+  width: 300px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.hero-right img:hover {
+  transform: scale(1.05);
+}
+
+/* EXPERIENCE */
+.experience-card {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.role {
+  display: block;
+  margin-bottom: 15px;
+  color: #aaa;
+}
+
+.experience-card ul {
+  line-height: 1.6;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skills-grid div {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* PROJECTS */
 .card {
-  padding: 2em;
+  background: #222;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+/* CONTACT */
+.contact-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.linkedin-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #0a66c2;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.linkedin-btn:hover {
+  background: #084a91;
+  transform: translateY(-4px);
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #111;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: #111;
+    width: 200px;
+    padding: 20px;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right img {
+    width: 220px;
+  }
 }
