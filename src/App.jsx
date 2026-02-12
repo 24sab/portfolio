@@ -119,8 +119,10 @@ function App() {
 
         <div className="contact-card">
           <p>
-            I'm open to collaboration, freelance opportunities, and professional networking.
+            Interested in building scalable web solutions or collaborating on innovative projects?
+            Let’s connect and create something impactful together.
           </p>
+
 
           <a
             href="https://www.linkedin.com/in/sabira-k-0b3421212/"
