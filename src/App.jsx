@@ -1,140 +1,61 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import profile from "./assets/profile.png";
+
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Stats from "./components/Stats";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [toastMessage, setToastMessage] = useState(null);
+
+  const showToast = (msg) => {
+    setToastMessage(msg);
+    setTimeout(() => {
+      setToastMessage(null);
+    }, 3000);
+  };
 
   return (
-    <div className="app">
+    <div className="app-root">
+      {/* Dynamic Background Mesh */}
+      <div className="bg-canvas-mesh">
+        <div className="mesh-gradient-orb orb-1" />
+        <div className="mesh-gradient-orb orb-2" />
+        <div className="mesh-gradient-orb orb-3" />
+      </div>
 
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <div className="logo">Sabira K</div>
-
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-          <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a></li>
-          <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-        </ul>
-
-        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-          ☰
+      {/* Floating Toast Notification */}
+      {toastMessage && (
+        <div className="app-toast">
+          <span className="toast-dot" />
+          <span>{toastMessage}</span>
         </div>
-      </nav>
+      )}
 
-      {/* HERO */}
-      {/* HERO */}
-      <section className="hero" id="home">
-        <div className="hero-container">
+      {/* Navigation */}
+      <Navbar />
 
-          <div className="hero-left">
-            <h1>Hi, I'm <span className="highlight">Sabira K</span></h1>
-            <h2>Web Developer</h2>
-            <p>
-              I create scalable and performant web solutions with a focus on
-              clean code, architecture, and exceptional user experience.
-            </p>
-          </div>
+      {/* Main Sections */}
+      <main className="main-content">
+        <Hero />
+        <Stats />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact onShowToast={showToast} />
+      </main>
 
-          <div className="hero-right">
-            <div className="profile-wrapper">
-              <img src={profile} alt="Sabira Profile" />
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* ABOUT */}
-      <section id="about" className="section">
-        <h2>About Me</h2>
-        <p>
-          I specialize in WordPress and WooCommerce plugin architecture,
-          complex business logic implementation, API integrations, and 
-          React-based frontend enhancements. I work with production-level 
-          systems and focus on scalability and clean development practices.
-        </p>
-      </section>
-
-      {/* EXPERIENCE */}
-      <section id="experience" className="section dark">
-        <h2>Professional Experience</h2>
-
-        <div className="experience-card">
-          <h3>Acodez IT Solutions</h3>
-          <span className="role">
-            WordPress Plugin Developer | Jan 2023 – Present
-          </span>
-
-          <ul>
-            <li>Architect and maintain scalable WordPress & WooCommerce plugins in live production systems.</li>
-            <li>Design complex business logic using hooks, filters, CPTs, and secure coding standards.</li>
-            <li>Develop React.js components to enhance frontend usability and responsiveness.</li>
-            <li>Resolve compatibility challenges during WordPress & WooCommerce core updates.</li>
-            <li>Optimize performance, database queries, and API integrations.</li>
-            <li>Collaborate with cross-functional teams to deliver client solutions.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* SKILLS */}
-      <section id="skills" className="section">
-        <h2>Technical Skills</h2>
-        <div className="skills-grid">
-          <div>HTML / CSS</div>
-          <div>JavaScript</div>
-          <div>React.js</div>
-          <div>PHP</div>
-          <div>MySQL</div>
-          <div>WordPress</div>
-          <div>WooCommerce</div>
-          <div>Git</div>
-        </div>
-      </section>
-
-      {/* PROJECTS */}
-      <section id="projects" className="section dark">
-        <h2>Projects</h2>
-
-        <div className="card">
-          <h3>College Online Store</h3>
-          <p>Flutter + MySQL based mobile commerce platform.</p>
-        </div>
-
-        <div className="card">
-          <h3>Online Oral Cancer Screening System</h3>
-          <p>Django + Flutter medical workflow system.</p>
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="section contact-section">
-        <h2>Let's Connect</h2>
-
-        <div className="contact-card">
-          <p>
-            Interested in building scalable web solutions or collaborating on innovative projects?
-            Let’s connect and create something impactful together.
-          </p>
-          <a
-            href="https://www.linkedin.com/in/sabira-k-0b3421212/"
-            target="_blank"
-            rel="noreferrer"
-            className="linkedin-btn"
-          >
-            Visit My LinkedIn Profile
-          </a>
-        </div>
-      </section>
-
-      <footer>
-        © 2026 Sabira K | WordPress Plugin Developer
-      </footer>
-
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
