@@ -25,7 +25,7 @@ export default function Experience() {
         </div>
 
         <div className="experience-timeline">
-          {experienceData.map((exp, idx) => (
+          {experienceData.map((exp) => (
             <div key={exp.company} className="timeline-item">
               <div className="timeline-marker">
                 <div className="marker-dot">

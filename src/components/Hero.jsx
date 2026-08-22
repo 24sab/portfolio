@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { LinkedInIcon, GitHubIcon } from "./Icons";
 
-export default function Hero({ onOpenContact }) {
+export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

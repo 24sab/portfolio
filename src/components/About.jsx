@@ -1,5 +1,4 @@
 import React from "react";
-import { personalInfo } from "../data/portfolioData";
 import { 
   Puzzle, 
   Terminal, 
@@ -90,7 +89,7 @@ export default function About() {
 
           {/* Right pillars column */}
           <div className="about-pillars-grid">
-            {pillars.map((pillar, index) => (
+            {pillars.map((pillar) => (
               <div key={pillar.title} className="pillar-card">
                 <div className="pillar-icon-box">
                   {pillar.icon}

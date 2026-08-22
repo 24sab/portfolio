@@ -8,7 +8,7 @@ import {
   Send 
 } from "lucide-react";
 
-export default function Navbar({ onOpenContact }) {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
