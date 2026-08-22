@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { personalInfo } from "../data/portfolioData";
 import { 
   Mail, 
-  Phone, 
   MapPin, 
   Send, 
   Copy, 
@@ -72,7 +71,7 @@ export default function Contact({ onShowToast }) {
           <div className="contact-info-card">
             <h3 className="contact-card-heading">Contact Information</h3>
             <p className="contact-intro-text">
-              Reach out directly via email, phone, or LinkedIn. I typically respond within 24 hours.
+              Reach out directly via email or LinkedIn. I typically respond within 24 hours.
             </p>
 
             <div className="contact-channels-list">
@@ -94,27 +93,6 @@ export default function Contact({ onShowToast }) {
                   title="Copy email to clipboard"
                 >
                   {copiedField === "Email" ? <Check size={16} className="text-success" /> : <Copy size={16} />}
-                </button>
-              </div>
-
-              {/* Phone */}
-              <div className="channel-item">
-                <div className="channel-icon-box">
-                  <Phone size={20} />
-                </div>
-                <div className="channel-info">
-                  <span className="channel-label">Phone / WhatsApp</span>
-                  <a href={`tel:${personalInfo.phone}`} className="channel-value">
-                    {personalInfo.phone}
-                  </a>
-                </div>
-                <button
-                  type="button"
-                  className="btn-copy"
-                  onClick={() => handleCopy(personalInfo.phone, "Phone number")}
-                  title="Copy phone to clipboard"
-                >
-                  {copiedField === "Phone number" ? <Check size={16} className="text-success" /> : <Copy size={16} />}
                 </button>
               </div>
 

@@ -5,7 +5,6 @@ import {
   ArrowRight, 
   Download, 
   Mail, 
-  Phone, 
   Sparkles, 
   MapPin,
   CheckCircle2, 
@@ -136,13 +135,6 @@ export default function Hero({ onOpenContact }) {
               >
                 <Mail size={18} />
               </a>
-              <a
-                href={`tel:${personalInfo.phone}`}
-                className="social-btn"
-                aria-label="Phone Call"
-              >
-                <Phone size={18} />
-              </a>
             </div>
           </div>
         </div>
@@ -177,7 +169,7 @@ export default function Hero({ onOpenContact }) {
                 </div>
                 <div className="floating-badge-text">
                   <span className="badge-title">3+ Years Exp</span>
-                  <span className="badge-sub">Acodez IT Solutions</span>
+                  <span className="badge-sub">WordPress & PHP</span>
                 </div>
               </div>
             </div>

@@ -10,13 +10,12 @@ export const personalInfo = {
   bio: "WordPress & PHP Developer with 3+ years of experience developing and maintaining scalable WordPress and WooCommerce plugins using PHP, JavaScript, React.js, and MySQL. Skilled in custom plugin development, WordPress Hooks & Filters, REST API integration, performance optimization, debugging, and security best practices. Experienced in leveraging AI-assisted development tools to enhance development efficiency, code quality, and productivity while delivering secure, scalable, and maintainable solutions.",
   location: "Kozhikode, Kerala, India",
   email: "sabirasdk24@gmail.com",
-  phone: "+91 9048752721",
   linkedin: "https://www.linkedin.com/in/sabira-k-0b3421212/",
   github: "https://github.com/24sab",
   status: "Available for new opportunities & freelance projects",
   stats: [
     { label: "Years Experience", value: "3+", suffix: "" },
-    { label: "Production Plugins & Solutions", value: "15+", suffix: "" },
+    { label: "Active Production Plugins", value: "3", suffix: "" },
     { label: "Core Technologies", value: "10+", suffix: "" },
     { label: "Code Quality & Uptime", value: "99.9%", suffix: "" }
   ]
